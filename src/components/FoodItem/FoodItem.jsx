@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import "./FoodItem.css";
 import { StoreContext } from "../../context/StoreContext";
-import addIcon from "../../assets/add_icon_white.png";
-import removeIcon from "../../assets/remove_icon_red.png";
-import starIcon from "../../assets/rating_starts.png";
+import addIcon from "../../../public/assets/add_icon_white.png";
+import removeIcon from "../../../public/assets/remove_icon_red.png";
+import starIcon from "../../../public/assets/rating_starts.png";
 
 const FoodItem = ({ id, name, description, price, image }) => {
   const { url, addToCart, removeFromCart, cartItems } = useContext(StoreContext);
