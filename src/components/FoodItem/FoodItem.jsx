@@ -11,10 +11,11 @@ const FoodItem = ({ id, name, description, price, image }) => {
 
   // ✅ Handle image path safely (works for all DB formats)
   // ✅ Correct image URL handling (covers both DB formats)
-const imageUrl = image.startsWith("/images")
-  ? `${url}${image}`             // <-- DB contains "/images/filename"
-  : `${url}/images/${image}`;    // <-- DB contains "filename"
+const BASE_URL = "https://food-del-backend-eg8o.onrender.com";
 
+const imageUrl = image.startsWith("/images")
+  ? `${BASE_URL}${image}` 
+  : `${BASE_URL}/images/${image}`;
 
   return (
     <div className="food-item">
